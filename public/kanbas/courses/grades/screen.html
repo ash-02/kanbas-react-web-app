@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        td {
+            vertical-align: top;
+        }
+        .gradesTable table {
+            border: 1px solid black;
+        }
+        .gradesTable th {
+            border: 1px solid black;
+        }
+        .gradesTable td {
+            border: 1px solid black;
+        }
+    </style>
+    <table>
+        <td>
+            <div>
+                <ul>
+                    <li>
+                        <a href="/kanbas/account/profile/screen.html">
+                            Account
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            Dashboard
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/kanbas/courses/home/screen.html">
+                            Courses
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            Calendar
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            Inbox
+                        </a>
+                    </li>
+                    <li><a href="#">History</a></li>
+                    <li><a href="#">Studio</a></li>
+                    <li><a href="#">Comments</a></li>
+                    <li><a href="#">Help</a></li>
+                </ul>
+            </div>
+        </td>
+        <td>
+            <div>
+                <ul>
+                    <li><a href="/kanbas/courses/home/screen.html">Home</a></li>
+                    <li><a href="#">Modules</a></li>
+                    <li><a href="#">Piazza</a></li>
+                    <li><a href="#">Zoom Meetings</a></li>
+                    <li><a href="/kanbas/courses/assignments/index.html">Assignments</a></li>
+                    <li><a href="#">Quizzes</a></li>
+                    <li><a href="/kanbas/courses/grades/screen.html">Grades</a></li>
+                    <li><a href="#">People</a></li>
+                    <li><a href="#">Panopto Video</a></li>
+                    <li><a href="#">Discussions</a></li>
+                    <li><a href="#">Announcements</a></li>
+                    <li><a href="#">Pages</a></li>
+                    <li><a href="#">Files</a></li>
+                    <li><a href="#">Rubrics</a></li>
+                    <li><a href="#">Outcomes</a></li>
+                    <li><a href="#">Collaborations</a></li>
+                    <li><a href="#">Syllabus</a></li>
+                    <li><a href="/kanbas/courses/settings/index.html">Settings</a></li>
+                </ul>
+            </div>
+        </td>
+        <td>
+            <div>
+                <div class="grades-button-group">
+                    <select name="Gradebook" id="Gradebook">
+                        <option value="Gradebook" selected>Gradebook</option>
+                        <option value="Spring 2024">Spring 2024</option>
+                        <option value="Fall 2023">Fall 2023</option>
+                        <option value="Spring 2023">Spring 2023</option>
+                        <option value="Fall 2022">Fall 2022</option>
+                    </select>
+                    <button>Import</button>
+                    <select name="Export" id="Export">
+                        <option value="Export" selected>Export</option>
+                        <option value="Spring 2024">Spring 2024</option>
+                        <option value="Fall 2023">Fall 2023</option>
+                        <option value="Spring 2023">Spring 2023</option>
+                        <option value="Fall 2022">Fall 2022</option>
+                    </select>
+                    <button>Configure</button>
+                </div>
+                <br>
+                <div class="filter-group">
+                    <label for="StudentName">
+                        <h3>
+                            Student Name
+                        </h3>
+                        <input type="text" name="StudentName" id="StudentName" placeholder="Search Students">
+                    </label>
+                    <br>
+                    <br>
+                    <label for="Assignments">
+                        <h3>
+                            Assignment Names
+                        </h3>
+                        <input type="text" name="Assignments" id="Assignments" placeholder="Search Assignments">
+                    </label>
+                </div>
+                <br>
+                <div class="gradesTable">
+                    <table style="text-align: center;" >
+                        <thead>
+                            <th>
+                                Student Name
+                            </th>
+                            <th>
+                                A1 Setup <br>
+                                Out of 100
+                            </th>
+                            <th>
+                                A2 HTML <br>
+                                Out of 100
+                            </th>
+                            <th>
+                                A3 CSS <br>
+                                Out of 100
+                            </th>
+                            <th>
+                                A4 Bootstrap <br>
+                                Out of 100
+                            </th>
+                            <th>
+                                A5 JavaScript <br>
+                                Out of 100
+                            </th>
+                            <th>
+                                A6 React <br>
+                                Out of 100
+                            </th>
+                            <th>
+                                A7 REDUX <br>
+                                Out of 100
+                            </th>
+                            <th>
+                                A8 Node <br>
+                                Out of 100
+                            </th>
+                            <th>
+                                A9 MONGO <br>
+                                Out of 100
+                            </th>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <p>
+                                        John Doe
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        100
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        100
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        100
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        100
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        100
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        100
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        100
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        100
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        100
+                                    </p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>
+                                        Alice Wonderland
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        100
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        100
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        10
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        10
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        10
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        10
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        10
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        10
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        10
+                                    </p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>
+                                        Princess Leia
+                                    </p>
+                                </td>
+                                <td>
+                                    <input type="text" name="" id="" disabled value="97" style="width: 50%; text-align: center;">
+                                </td>
+                                <td>
+                                    <p>
+                                        100
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        100
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        10
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        10
+                                    </p>
+                                </td>
+                                <td>
+                                    <input type="text" name="" id="" disabled value="97" style="width: 50%; text-align: center;">
+                                </td>
+                                <td>
+                                    <p>
+                                        10
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        10
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        10
+                                    </p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>
+                                        Luke Skywalker
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        100
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        10
+                                    </p>
+                                </td>
+                                <td>
+                                    <input type="text" name="" id="" disabled value="97" style="width: 50%; text-align: center;">
+                                </td>
+                                <td>
+                                    <p>
+                                        100
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        10
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        100
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        10
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        100
+                                    </p>
+                                </td>
+                                <td>
+                                    <input type="text" name="" id="" disabled value="97" style="width: 50%; text-align: center;">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>
+                                        Han Solo
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        100
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        10
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        100
+                                    </p>
+                                </td>
+                                <td>
+                                    <input type="text" name="" id="" disabled value="97" style="width: 50%; text-align: center;">
+                                </td>
+                                <td>
+                                    <p>
+                                        100
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        10
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        100
+                                    </p>
+                                </td>
+                                <td>
+                                    <input type="text" name="" id="" disabled value="97" style="width: 50%; text-align: center;">
+                                </td>
+                                <td>
+                                    <p>
+                                        100
+                                    </p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>
+                                        Lando Calrissian
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        100
+                                    </p>
+                                </td>
+                                <td>
+                                    <input type="text" name="" id="" disabled value="97" style="width: 50%; text-align: center;">
+                                </td>
+                                <td>
+                                    <p>
+                                        100
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        10
+                                    </p>
+                                </td> 
+                                <td>
+                                    <p>
+                                        100
+                                    </p>
+                                </td> 
+                                <td>
+                                    <p>
+                                        10
+                                    </p>
+                                </td> 
+                                <td>
+                                    <input type="text" name="" id="" disabled value="97" style="width: 50%; text-align: center;">
+                                </td> 
+                                <td>
+                                    <p>
+                                        10
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        100
+                                    </p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </td>
+    </table>
+</body>
+</html>
