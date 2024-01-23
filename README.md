@@ -1,4 +1,4 @@
-# This repository is for the assignment of the course CS5610 Web Development at Northeastern University. The assignment is to create a Canvas clone web application using React.
+## This repository is for the assignment of the course CS5610 Web Development at Northeastern University. The assignment is to create a Canvas clone web application using React.
 
 ## Branches
 - `main` - The main branch of the repository.
