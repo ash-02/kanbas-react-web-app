@@ -4,41 +4,300 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="/Kanbas/styles.css" />
+    <link rel="stylesheet" href="/Kanbas/Navigation/index.css" />
+    <link rel="stylesheet" href="/Kanbas/courses/home/index.css">
+    <link rel="stylesheet" href="/Kanbas/Courses/Navigation/index.css" />
+    <link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css" />
 </head>
 <body>
-    <table>
-        <td valign="top">
-            <div>
-                <ul>
+    <div class="canvas-home-main-container">
+        <div class="d-none d-sm-block">
+            <ul class="wd-kanbas-navigation">
+                <li class="main-logo-container">
+                    <a href="https://northeastern.edu">
+                        <img src="/assets/icons/NU_main_logo.png" alt="">
+                    </a>
+                </li>
+                <ul class="wd-kanbas-navigation main-options">
                     <li>
                         <a href="/kanbas/account/profile/screen.html">
+                            <i class="fa fa-user"></i>
                             Account
                         </a>
                     </li>
-                    <li>
-                        <a href="#">
-                            Dashboard
-                        </a>
+                    <li class="wd-active">
+                        <a href="/Kanbas/Dashboard/screen.html">
+                                <i class="fa fa-tachometer"></i>
+                                Dashboard
+                            </a>
                     </li>
                     <li>
                         <a href="/kanbas/courses/home/screen.html">
+                            <i class="fa fa-book"></i>
                             Courses
                         </a>
                     </li>
                     <li>
                         <a href="#">
+                            <i class="fa fa-calendar"></i>
                             Calendar
                         </a>
                     </li>
                     <li>
                         <a href="#">
+                            <i class="fa fa-inbox"></i>
                             Inbox
                         </a>
                     </li>
-                    <li><a href="#">History</a></li>
-                    <li><a href="#">Studio</a></li>
-                    <li><a href="#">Comments</a></li>
-                    <li><a href="#">Help</a></li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-history"></i>
+                            History
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-cogs"></i>
+                            Studio
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-comments"></i>
+                            Comments
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-question-circle"></i>
+                            Help
+                        </a>
+                    </li>
+                </ul>
+            </ul>
+        </div>
+        <div>
+            <ul class="wd-navigation m-4 ">
+                <li><a href="/kanbas/courses/home/screen.html">Home</a></li>
+                <li class="wd-active"><a href="#">Modules</a></li>
+                <li><a href="#">Piazza</a></li>
+                <li><a href="#">Zoom Meetings</a></li>
+                <li><a href="/kanbas/courses/assignments/index.html">Assignments</a></li>
+                <li><a href="#">Quizzes</a></li>
+                <li><a href="/kanbas/courses/grades/screen.html">Grades</a></li>
+                <li><a href="#">People</a></li>
+                <li><a href="#">Panopto Video</a></li>
+                <li><a href="#">Discussions</a></li>
+                <li><a href="#">Announcements</a></li>
+                <li><a href="#">Pages</a></li>
+                <li><a href="#">Files</a></li>
+                <li><a href="#">Rubrics</a></li>
+                <li><a href="#">Outcomes</a></li>
+                <li><a href="#">Collaborations</a></li>
+                <li><a href="#">Syllabus</a></li>
+                <li><a href="/kanbas/courses/settings/index.html">Settings</a></li>
+            </ul>
+        </div>
+        <div>
+            <div>
+                <button>Collapse All</button>
+                <button>View Progress</button>
+                <select name="Publish" id="Publish">
+                    <option value="Publish All" selected>Publish All</option>
+                    <option value="Publish">Publish</option>
+                    <option value="Unpublish">Unpublish</option>
+                </select>
+                <button>Module</button>
+            </div>
+            <div>
+                <ul>
+                    <li>
+                        Week 0 - Intro
+                        <ul>
+                            <li>
+                                Learning Objectives
+                                <ul>
+                                    <li>Introduction to the Course</li>
+                                    <li>Learn what is web development</li>
+                                    <li>Creating a development environment</li>
+                                    <li>Creating a web application</li>
+                                    <li>Getting started with the 1st assignment</li>
+                                </ul>
+                            </li>
+                            <li>
+                                Readings
+                                <ul>
+                                    <li>
+                                        Full Stack Developer - Chapter 1 - Introduction
+                                    </li>
+                                    <li>
+                                        Full Stack Developer - Chapter 2 - Creating User Interfaces with HTML
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                Slides
+                                <ul>
+                                    <li><a href="#">
+                                            Introduction to Web Development. Links to an external site.
+                                        </a></li>
+                                    <li><a href="#">
+                                            Creating an HTTP Server with Node.js. Links to an external site.
+                                        </a></li>
+                                    <li><a href="#">
+                                            Creating a React Application. Links to an external site.
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        Week 1 - HTML
+                        <ul>
+                            <li>
+                                Learning Objectives
+                                <ul>
+                                    <li>
+                                        Learn how to create user interfaces with HTML
+                                    </li>
+                                    <li>
+                                        Keep working on Assignment 1
+                                    </li>
+                                    <li>
+                                        Deploy the assignment to Netlify
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                Readings
+                                <ul>
+                                    <li>
+                                        Full Stack Developer - Chapter 1 - Introduction
+                                    </li>
+                                    <li>
+                                        Full Stack Developer - Chapter 2 - Creating User Interfaces with HTML
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                Slides
+                                <ul>
+                                    <li><a href="#">
+                                        Further more about HTML. Links to an external site.
+                                        </a></li>
+                                    <li><a href="#">
+                                        Introduction to Deploying to Netlify. Links to an external site.
+                                        </a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div>
+            <h2>
+                Course Status
+            </h2>
+            <div>
+                <button>Unpublished</button>
+                <button>Published</button>
+            </div>
+            <ul>
+                <li><a href="#">Import Existing Content</a></li>
+                <li><a href="#">Import from Commons</a></li>
+                <li><a href="#">Choose Home Page</a></li>
+                <li><a href="#">View Course Stream</a></li>
+                <li><a href="#">New Announcement</a></li>
+                <li><a href="#">New Analytics</a></li>
+                <li><a href="#">View Course Notifications</a></li>
+            </ul>
+            <h2>
+                Comming Up
+            </h2>
+            <a href="#">
+                View Calendar
+            </a>
+            <ul>
+                <li><a href="#">
+                    Lecture CS5610.12631.2024Sep7 at 6:00pm
+                </a></li>
+                <li><a href="#">
+                    Lecture CS5610.12631.2024Sep9 at 6:00pm
+                </a></li>
+                <li><a href="#">
+                    Lecture CS5610.12631.2024Sep14 at 6:00pm
+                </a></li>
+            </ul>
+        </div>
+    </div>
+    <!-- <table>
+        <td valign="top">
+            <div class="d-none d-sm-block">
+                <ul class="wd-kanbas-navigation">
+                    <li class="main-logo-container">
+                        <a href="https://northeastern.edu">
+                            <img src="/public/assets/icons/NU_main_logo.png" alt="">
+                        </a>
+                    </li>
+                    <ul class="wd-kanbas-navigation main-options">
+                        <li>
+                            <a href="/kanbas/account/profile/screen.html">
+                                <i class="fa fa-user"></i>
+                                Account
+                            </a>
+                        </li>
+                        <li class="wd-active">
+                            <a href="/Kanbas/Dashboard/screen.html">
+                                <i class="fa fa-tachometer"></i>
+                                Dashboard
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/kanbas/courses/home/screen.html">
+                                <i class="fa fa-book"></i>
+                                Courses
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fa fa-calendar"></i>
+                                Calendar
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fa fa-inbox"></i>
+                                Inbox
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fa fa-history"></i>
+                                History
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fa fa-cogs"></i>
+                                Studio
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fa fa-comments"></i>
+                                Comments
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fa fa-question-circle"></i>
+                                Help
+                            </a>
+                        </li>
+                    </ul>
                 </ul>
             </div>
         </td>
@@ -201,6 +460,6 @@
                 </ul>
             </div>
         </td>
-    </table>
+    </table> -->
 </body>
 </html>

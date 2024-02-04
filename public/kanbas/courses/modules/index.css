@@ -1,0 +1,55 @@
+.wd-modules,
+.wd-modules * {
+    border-radius: 0%;
+    border: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+.wd-modules {
+    margin: 5px;
+}
+
+.wd-modules>li {
+    background-color: lightgray;
+    border: 1px solid gray !important;
+    border-left: none !important;
+}
+
+.wd-modules>li>div {
+    padding: 6px;
+    border-left: 1px solid gray !important;
+}
+
+.wd-modules>li>ul>li {
+    padding: 5px;
+    border-top: 1px solid gray !important;
+    border-left: 2px solid green;
+}
+
+.wd-modules>li>ul>ul>li {
+    padding: 5px;
+    border-top: 1px solid gray !important;
+    border-left: 2px solid green;
+    background-color: white;
+    /* background-color: lightgreen; */
+}
+
+.wd-modules>li>ul>ul>li>i, .wd-modules>li>ul>ul>li>a>i {
+    color: grey;
+    margin-right: 3rem;
+}
+
+.wd-modules>li>ul>ul>li>a {
+    color: red;
+}
+
+.wd-modules>li {
+    margin-bottom: 20px;
+}
+
+#main-button-group button {
+    border: 0.5px solid gray;
+    height: 2.5rem;
+    max-width: 8rem;
+}
