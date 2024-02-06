@@ -16,7 +16,7 @@
             <option value="Unpublish">Unpublish</option>
         </select>
         <button class="bg-danger text-white "><i class="fa fa-plus m-2 "></i>Module</button>
-        <button><i class="fa fa-ellipsis-v ms-2"></i></button>
+        <button><i class="fa fa-ellipsis-v ms-2" style="padding: 0%;"></i></button>
     </div>
     <!-- Implement buttons Collapse All, View Progress, etc. here -->
     <script>
@@ -81,7 +81,11 @@
                 </li>
                 <ul>
                     ${module.learningObjectives.map((objective) => {
-                        return `<li><i class="fa fa-ellipsis-v"></i>${objective}</li>`;
+                        return `<li><i class="fa fa-ellipsis-v"></i>${objective}
+                            <span class="float-end">
+                                <i class="fa fa-check-circle text-success"></i>
+                                <i class="fa fa-ellipsis-v ms-2"></i>
+                            </span></li>`;
                     }).join('')}
                 </ul>
                 <li class="list-group-item">
@@ -93,7 +97,11 @@
                 </li>
                 <ul>
                     ${module.readings.map((reading) => {
-                        return `<li><i class="fa fa-ellipsis-v"></i>${reading}</li>`;
+                        return `<li><i class="fa fa-ellipsis-v"></i>${reading}
+                            <span class="float-end">
+                                <i class="fa fa-check-circle text-success"></i>
+                                <i class="fa fa-ellipsis-v ms-2"></i>
+                            </span></li>`;
                     }).join('')}
                 </ul>
                 <li class="list-group-item">
@@ -105,7 +113,11 @@
                 </li>
                 <ul>
                     ${module.slides.map((slide) => {
-                        return `<li><a href="#"><i class="fa fa-ellipsis-v"></i>${slide}</a></li>`;
+                        return `<li><a href="#"><i class="fa fa-ellipsis-v"></i>${slide}</a>
+                            <span class="float-end">
+                                <i class="fa fa-check-circle text-success"></i>
+                                <i class="fa fa-ellipsis-v ms-2"></i>
+                            </span></li>`;
                     }).join('')}
                 </ul>
             </ul>

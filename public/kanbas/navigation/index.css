@@ -16,7 +16,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    gap: 5px;
+    /* gap: 5px; */
 }
 
 .wd-kanbas-navigation li {
@@ -40,10 +40,11 @@
 .wd-kanbas-navigation li.wd-active {
     background-color: white;
     padding: 10px;
+    width: 100%;
 }
 
 .wd-kanbas-navigation li.wd-active a {
-    color: red;
+    color: #D41B2C;
 }
 
 .wd-kanbas-navigation a {

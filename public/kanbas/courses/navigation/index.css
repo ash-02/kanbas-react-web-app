@@ -11,7 +11,7 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-    gap: 0.5rem;
+    /* gap: 0.1rem; */
 }
 
 .wd-navigation li {
@@ -27,6 +27,6 @@
 }
 
 .wd-navigation a {
-    color: red;
+    color: #D41B2C;
     text-decoration: none;
 }

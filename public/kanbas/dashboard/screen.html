@@ -14,8 +14,12 @@
 </head>
 
 <body>
-    <div class="kanbas-main-dashboard-container">
-        <div class="d-none d-sm-block">
+    <div class="kanbas-main-dashboard-container" style="
+    height: 100vh;
+    ">
+        <div class="d-none d-sm-block" style="
+        height: 100vh;
+        ">
             <ul class="wd-kanbas-navigation">
                 <li class="main-logo-container">
                     <a href="https://northeastern.edu">
@@ -80,10 +84,25 @@
                 </ul>
             </ul>
         </div>
-        <div class="kanbas-dashboard-courses-container">
+        <div class="kanbas-dashboard-courses-container" style="
+        height: 100vh;
+        overflow: scroll;
+        ">
             <div class="p-4 overflow-auto">
                 <script>
                     const courses = [
+                        {
+                            title: "CS1234 React JS",
+                            description: "Full Stack software developer",
+                            image: "/assets/images/reactjs.jpg",
+                            link: "/Kanbas/Courses/Home/screen.html"
+                        },
+                        {
+                            title: "CS1234 React JS",
+                            description: "Full Stack software developer",
+                            image: "/assets/images/reactjs.jpg",
+                            link: "/Kanbas/Courses/Home/screen.html"
+                        },
                         {
                             title: "CS1234 React JS",
                             description: "Full Stack software developer",
@@ -136,7 +155,7 @@
                                                     ${course.title}
                                                 </a>
                                                 <p class="card-text">${course.description}</p>
-                                                <a html="#" class="btn btn-primary"> Go </a>
+                                                <a href="/kanbas/courses/home/screen.html" class="btn btn-primary"> Go </a>
                                             </div>
                                         </div>
                                     </div>
