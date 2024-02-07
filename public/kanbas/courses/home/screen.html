@@ -107,20 +107,24 @@
                         <li class="breadcrumb-item m-0 "><a href="#">
                                 CS5610.12631.2024
                             </a></li>
-                        <li class="breadcrumb-item active" aria-current="page">Modules</li>
+                        <li class="breadcrumb-item active" aria-current="page">Home</li>
                     </ol>
                 </nav>
             </div>
             <div class="d-md-none d-flex flex-row justify-content-between align-items-center bg-black text-white px-4">
-                <i class="
-                fa fa-bars
-                "></i>
+                <a href="/Kanbas/navigation/index.html" style="
+                color: white;
+                    ">
+                    <i class="
+                    fa fa-bars
+                    "></i>
+                </a>
                 <div class="p-2">
                     <h6 class="m-0" style="text-align: center;">
                         CS5610.12631.2024
                         <br>
                         <span>
-                            Modules
+                            Home
                         </span>
                     </h6>
                 </div>
@@ -218,9 +222,9 @@
                             <script>
                                 Modules.forEach((module) => {
                                     document.write(`
-                                  <li class="list-group-item">
-                              <div>
-                                  <i class="fa fa-ellipsis-v"></i> ${module.title}
+                                  <li class="list-group-item fw-medium ">
+                              <div class="fw-medium ">
+                                  <i class="fa fa-ellipsis-v "></i> ${module.title}
                                   <span class="float-end">
                                       <i class="fa fa-check-circle text-success"></i>
                                       <i class="fa fa-plus ms-2"></i>
@@ -228,7 +232,7 @@
                                   </span>
                               </div>
                               <ul class="list-group">
-                                  <li class="list-group-item">
+                                  <li class="list-group-item p-2 fw-medium ">
                                       <i class="fa fa-ellipsis-v"></i> Learning Objectives
                                       <span class="float-end">
                                           <i class="fa fa-check-circle text-success"></i>
@@ -237,7 +241,7 @@
                                   </li>
                                   <ul>
                                       ${module.learningObjectives.map((objective) => {
-                                        return `<li><i class="fa fa-ellipsis-v"></i>${objective}
+                                        return `<li class="p-2 fw-medium "><i class="fa fa-ellipsis-v"></i>${objective}
                                               <span class="float-end">
                                                   <i class="fa fa-check-circle text-success"></i>
                                                   <i class="fa fa-ellipsis-v ms-2"></i>
@@ -269,7 +273,7 @@
                                   </li>
                                   <ul>
                                       ${module.slides.map((slide) => {
-                                        return `<li><a href="#"><i class="fa fa-ellipsis-v"></i>${slide}</a>
+                                        return `<li><a href="#" class="text-decoration-none "><i class="fa fa-ellipsis-v mx-2  "></i><i class="fa fa-link mx-3 "></i>${slide}</a>
                                               <span class="float-end">
                                                   <i class="fa fa-check-circle text-success"></i>
                                                   <i class="fa fa-ellipsis-v ms-2"></i>
