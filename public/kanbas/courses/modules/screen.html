@@ -222,9 +222,9 @@
                             <script>
                                 Modules.forEach((module) => {
                                     document.write(`
-                                  <li class="list-group-item">
-                              <div>
-                                  <i class="fa fa-ellipsis-v"></i> ${module.title}
+                                  <li class="list-group-item fw-medium ">
+                              <div class="fw-medium ">
+                                  <i class="fa fa-ellipsis-v "></i> ${module.title}
                                   <span class="float-end">
                                       <i class="fa fa-check-circle text-success"></i>
                                       <i class="fa fa-plus ms-2"></i>
@@ -232,7 +232,7 @@
                                   </span>
                               </div>
                               <ul class="list-group">
-                                  <li class="list-group-item">
+                                  <li class="list-group-item p-2 fw-medium ">
                                       <i class="fa fa-ellipsis-v"></i> Learning Objectives
                                       <span class="float-end">
                                           <i class="fa fa-check-circle text-success"></i>
@@ -241,7 +241,73 @@
                                   </li>
                                   <ul>
                                       ${module.learningObjectives.map((objective) => {
-                                        return `<li><i class="fa fa-ellipsis-v"></i>${objective}
+                                        return `<li class="p-2 fw-medium "><i class="fa fa-ellipsis-v"></i>${objective}
+                                              <span class="float-end">
+                                                  <i class="fa fa-check-circle text-success"></i>
+                                                  <i class="fa fa-ellipsis-v ms-2"></i>
+                                              </span></li>`;
+                                    }).join('')}
+                                  </ul>
+                                  <li class="list-group-item">
+                                      <i class="fa fa-ellipsis-v"></i> Reading
+                                      <span class="float-end">
+                                          <i class="fa fa-check-circle text-success"></i>
+                                          <i class="fa fa-ellipsis-v ms-2"></i>
+                                      </span>
+                                  </li>
+                                  <ul>
+                                      ${module.readings.map((reading) => {
+                                        return `<li><i class="fa fa-ellipsis-v"></i>${reading}
+                                              <span class="float-end">
+                                                  <i class="fa fa-check-circle text-success"></i>
+                                                  <i class="fa fa-ellipsis-v ms-2"></i>
+                                              </span></li>`;
+                                    }).join('')}
+                                  </ul>
+                                  <li class="list-group-item">
+                                      <i class="fa fa-ellipsis-v"></i> Slides
+                                      <span class="float-end">
+                                          <i class="fa fa-check-circle text-success"></i>
+                                          <i class="fa fa-ellipsis-v ms-2"></i>
+                                      </span>
+                                  </li>
+                                  <ul>
+                                      ${module.slides.map((slide) => {
+                                        return `<li><a href="#" class="text-decoration-none "><i class="fa fa-ellipsis-v mx-2  "></i><i class="fa fa-link mx-3 "></i>${slide}</a>
+                                              <span class="float-end">
+                                                  <i class="fa fa-check-circle text-success"></i>
+                                                  <i class="fa fa-ellipsis-v ms-2"></i>
+                                              </span></li>`;
+                                    }).join('')}
+                                  </ul>
+                              </ul>
+                          </li>                
+                                  `)
+                                });
+                            </script>
+                            <!-- <script>
+                                Modules.forEach((module) => {
+                                    document.write(`
+                                  <li class="list-group-item fw-medium">
+                              <div class="fw-medium ">
+                                  <i class="fa fa-ellipsis-v"></i> ${module.title}
+                                  <span class="float-end">
+                                      <i class="fa fa-check-circle text-success"></i>
+                                      <i class="fa fa-plus ms-2"></i>
+                                      <i class="fa fa-ellipsis-v ms-2"></i>
+                                  </span>
+                              </div>
+                              <ul class="list-group">
+                                  <li class="list-group-item p-2 fw-medium">
+                                      <i class="fa fa-ellipsis-v"></i> Learning Objectives
+                                      <span class="float-end">
+                                          <i class="fa fa-check-circle text-success"></i>
+                                          <i class="fa fa-ellipsis-v ms-2"></i>
+                                      </span>
+                                  </li>
+                                  <ul>
+                                      ${module.learningObjectives.map((objective) => {
+                                        return `<li class="p-2 fw-medium><i class="fa fa-ellipsis-v"></i>${objective}
                                               <span class="float-end">
                                                   <i class="fa fa-check-circle text-success"></i>
                                                   <i class="fa fa-ellipsis-v ms-2"></i>
@@ -284,7 +350,7 @@
                           </li>                
                                   `)
                                 });
-                            </script>
+                            </script> -->
                             <!-- <li class="list-group-item">
                               <div>
                                   <i class="fa fa-ellipsis-v"></i> Week 1
@@ -372,13 +438,39 @@
                     <ul class="
                       course-status-list d-flex flex-column w-100 p-0 gap-1 mt-3 fs-6
                       ">
-                        <li class="w-100 p-2"><a href="#">Import Existing Content</a></li>
-                        <li class="w-100 p-2"><a href="#">Import from Commons</a></li>
-                        <li class="w-100 p-2"><a href="#">Choose Home Page</a></li>
-                        <li class="w-100 p-2"><a href="#">View Course Stream</a></li>
-                        <li class="w-100 p-2"><a href="#">New Announcement</a></li>
-                        <li class="w-100 p-2"><a href="#">New Analytics</a></li>
-                        <li class="w-100 p-2"><a href="#">View Course Notifications</a></li>
+                        <li class="w-100 p-2"><a href="#">
+                                <i class="fa-solid fa-file-import"></i>
+                                Import Existing Content</a></li>
+                        <li class="w-100 p-2"><a href="#">
+                                <i class="
+                            fa fa-upload
+                            "></i>
+                                Import from Commons</a></li>
+                        <li class="w-100 p-2"><a href="#">
+                                <i class="
+                            fa fa-home
+                            "></i>
+                                Choose Home Page</a></li>
+                        <li class="w-100 p-2"><a href="#">
+                                <i class="
+                            fa fa-comments
+                            "></i>
+                                View Course Stream</a></li>
+                        <li class="w-100 p-2"><a href="#">
+                                <i class="
+                            fa fa-bullhorn
+                            "></i>
+                                New Announcement</a></li>
+                        <li class="w-100 p-2"><a href="#">
+                                <i class="
+                            fa fa-chart-line
+                            "></i>
+                                New Analytics</a></li>
+                        <li class="w-100 p-2"><a href="#">
+                                <i class="
+                            fa fa-bell
+                            "></i>
+                                Course Notifications</a></li>
                     </ul>
                     <br>
                     <div>
