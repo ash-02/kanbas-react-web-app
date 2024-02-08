@@ -30,3 +30,23 @@
     color: #D41B2C;
     text-decoration: none;
 }
+
+.course-nav-small-screen {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.course-nav-small-screen ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 1rem;
+    list-style: none;
+}
+
+.course-nav-small-screen ul li a {
+    text-decoration: none;
+    color: #D41B2C;
+}
