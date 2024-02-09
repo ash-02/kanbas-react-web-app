@@ -3,10 +3,11 @@
 ## Branches
 - `main` - The main branch of the repository.
 - `a1` - The branch for the first assignment.
+- `a2` - The branch for the second assignment.
 
 ## Current Status
 - The first assignment is completed.
-- The second assignment is not started yet.
+- The second assignment is completed.
 - The third assignment is not started yet.
 - The fourth assignment is not started yet.
 - The fifth assignment is not started yet.
