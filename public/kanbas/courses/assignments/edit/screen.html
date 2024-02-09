@@ -175,7 +175,7 @@
                         </div>
                     </ul>
                 </div>
-                <div class="flex-fill flex-grow-1 p-2">
+                <div class="flex-fill flex-grow-1 p-2 w-100">
                     <div class="d-flex flex-column">
                         <div class="d-flex flex-row justify-content-end  align-items-center gap-4 ">
                             <h3 style="color: green;" class="m-0 fs-6">
@@ -195,10 +195,11 @@
                             <label for="assignment-name w-100">
                                 Assignment Name
                                 <br>
-                                <input class="input-tags" type="text" name="assignment-name" id="assignment-name" value="A1 - ENV + HTML"
-                                    placeholder="A1 - ENV + HTML">
+                                <input class="input-tags" type="text" name="assignment-name" id="assignment-name"
+                                    value="A1 - ENV + HTML" placeholder="A1 - ENV + HTML">
                             </label>
-                            <textarea class="input-tags" name="" id="" cols="30" rows="5">This assignment describes how to install and use HTML for Creating a website. This assignment describes how to install and use HTML for Creating a website. This assignment describes how to install and use HTML for Creating a website. This assignment describes how to install and use HTML for Creating a website. This assignment describes how to install and use HTML for Creating a website. </textarea>
+                            <textarea class="input-tags" name="" id="" cols="30"
+                                rows="5">This assignment describes how to install and use HTML for Creating a website. This assignment describes how to install and use HTML for Creating a website. This assignment describes how to install and use HTML for Creating a website. This assignment describes how to install and use HTML for Creating a website. This assignment describes how to install and use HTML for Creating a website. </textarea>
                             <div class="input-label-grps d-flex flex-column gap-2 ">
                                 <div class="input-grp">
                                     <label for="points">
@@ -248,6 +249,71 @@
                                         <div class="special-input-box w-100 p-4 ">
                                             <div class="special-input-grp">
                                                 <div class="w-100">
+                                                    <select name="" id="">
+                                                        <option value="Online" selected>
+                                                            Online
+                                                        </option>
+                                                        <option value="On Paper">
+                                                            On Paper
+                                                        </option>
+                                                        <option value="No Submission">
+                                                            No Submission
+                                                        </option>
+                                                    </select>
+                                                </div>
+                                                <div class="w-100">
+                                                    <label for="" class="fw-medium ">
+                                                        Online Entry Options
+                                                    </label>
+                                                    <label for="">
+                                                        <input type="checkbox" class="w-25 " name="" id="" checked>
+                                                        Text Entry
+                                                    </label>
+                                                    <label for="">
+                                                        <input type="checkbox" class="w-25 " name="" id="" checked>
+                                                        Website URL
+                                                    </label>
+                                                    <label for="">
+                                                        <input type="checkbox" class="w-25 " name="" id="" checked>
+                                                        Media Recordings
+                                                    </label>
+                                                    <label for="">
+                                                        <input type="checkbox" class="w-25 " name="" id="">
+                                                        Student Annotation
+                                                    </label>
+                                                    <label for="">
+                                                        <input type="checkbox" class="w-25 " name="" id="">
+                                                        File Uploads
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <button style="
+                                        width: 100%;
+                                        background-color: #f5f5f5;
+                                        color: black;
+                                        text-align: center;
+                                        border-top-left-radius: 0%;
+                                        border-top-right-radius: 0%;
+                                        border: 1px solid #E0E0E0;
+                                        border-top: none;
+                                        " class="">
+                                            <i class="
+                                            fa fa-plus
+                                            "></i>
+                                            Add
+                                        </button>
+                                    </div>
+                                </div>
+                                <br>
+                                <div class="input-grp">
+                                    <label>
+                                        Assign
+                                    </label>
+                                    <div class="d-flex flex-column " style="width: 50%;">
+                                        <div class="special-input-box w-100 p-4 ">
+                                            <div class="special-input-grp">
+                                                <div class="w-100">
                                                     <label for="">
                                                         Assign to
                                                     </label>
@@ -268,24 +334,20 @@
                                                     <label for="">
                                                         Due
                                                     </label>
-                                                    <input type="date" value="
-                                                    2023-18-09
-                                                    " placeholder="
-                                                    2023-18-09
-                                                    ">
+                                                    <input type="date" value="2023-09-18">
                                                 </div>
                                                 <div class="w-100 d-flex gap-2 ">
                                                     <div class="w-50">
                                                         <label for="">
                                                             Available From
                                                         </label>
-                                                        <input type="date">
+                                                        <input type="date" value="2023-09-06">
                                                     </div>
                                                     <div class="w-50">
                                                         <label for="">
                                                             Until
                                                         </label>
-                                                        <input type="date">
+                                                        <input type="date" value="2023-09-20">
                                                     </div>
                                                 </div>
                                             </div>
@@ -310,16 +372,18 @@
                             </div>
                             <div class="">
                                 <hr>
-                                <div class="d-flex flex-row justify-content-between align-items-start  ">
-                                    <label for="">
+                                <div class="d-flex flex-md-row flex-column justify-content-between align-items-md-start align-items-center gap-4 fs-6 ">
+                                    <label for="" class="fs-6 ">
                                         <input type="checkbox" name="" id="">
                                         Notify users that this content has changed
                                     </label>
                                     <div class="submission-button-grp">
-                                        <button onclick="window.location.href='/kanbas/courses/assignments/index.html';">
+                                        <button
+                                            onclick="window.location.href='/kanbas/courses/assignments/index.html';">
                                             Cancel
                                         </button>
-                                        <button onclick="window.location.href='/kanbas/courses/assignments/index.html';">
+                                        <button
+                                            onclick="window.location.href='/kanbas/courses/assignments/index.html';">
                                             Save
                                         </button>
                                     </div>
