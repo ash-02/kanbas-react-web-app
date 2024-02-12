@@ -6,7 +6,6 @@ import JsonStringify from "../json/JsonStringify";
 import FindFunction from "./FindFunction";
 import FindIndex from "./FindIndex";
 import FilterFunction from "./FilterFunction";
-import TemplateLiterals from "../string/TemplateLiterals";
 
 const WorkingWithArrays = () => {
     var functionScoped = 2;
