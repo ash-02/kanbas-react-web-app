@@ -3,6 +3,10 @@ import AddingAndRemovingDataToFromArrays from "./AddingAndRemovingDataToFromArra
 import ForLoops from "./ForLoops";
 import MapFunction from "./MapFunction";
 import JsonStringify from "../json/JsonStringify";
+import FindFunction from "./FindFunction";
+import FindIndex from "./FindIndex";
+import FilterFunction from "./FilterFunction";
+import TemplateLiterals from "../string/TemplateLiterals";
 
 const WorkingWithArrays = () => {
     var functionScoped = 2;
@@ -40,6 +44,13 @@ const WorkingWithArrays = () => {
             <MapFunction />
             <br />
             <JsonStringify />
+            <br />
+            <br />
+            <FindFunction />
+            <br />
+            <FindIndex />
+            <br />
+            <FilterFunction />
         </>
     );
 
