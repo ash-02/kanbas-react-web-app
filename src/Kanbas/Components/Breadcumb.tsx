@@ -2,6 +2,7 @@ import { HiMiniBars3 } from "react-icons/hi2";
 import { courses } from "../../Kanbas/Database";
 import { useParams } from "react-router-dom";
 import { Routes, Route, Navigate } from "react-router-dom";
+import './index.css';
 
 const Breadcumb = () => {
 
@@ -15,9 +16,9 @@ const Breadcumb = () => {
                 <ol className="breadcrumb
                         m-0
                         ">
-                    <li className="breadcrumb-item m-0 "><a>
+                    <li className="breadcrumb-item m-0 ">
                         {course?._id}
-                    </a></li>
+                    </li>
                     <li className="breadcrumb-item active" aria-current="page">
                     <Routes>
                         <Route path="/" element={<Navigate to="Home" />} />

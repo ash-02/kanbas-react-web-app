@@ -1,7 +1,6 @@
 import { Link, useLocation } from "react-router-dom";
 import "./index.css";
 import { FaTachometerAlt, FaRegUserCircle, FaBook, FaRegCalendarAlt } from "react-icons/fa";
-import { link } from "fs";
 function KanbasNavigation() {
     const links = [
         { label: "Account", icon: <FaRegUserCircle className="fs-2" /> },

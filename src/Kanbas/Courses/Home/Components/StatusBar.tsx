@@ -1,4 +1,4 @@
-import React from 'react'
+import "./index.css"
 
 const StatusBar = () => {
     return (
@@ -22,131 +22,138 @@ const StatusBar = () => {
                 <ul className="
                       course-status-list d-flex flex-column w-100 p-0 gap-1 mt-3 fs-6
                       ">
-                    <li className="w-100 p-2"><a href="#">
+                    <li className="w-100 p-2">
                         <i className="fa-solid fa-file-import"></i>
-                        Import Existing Content</a></li>
-                    <li className="w-100 p-2"><a href="#">
+                        Import Existing Content</li>
+                    <li className="w-100 p-2">
                         <i className="
                             fa fa-upload
                             "></i>
-                        Import from Commons</a></li>
-                    <li className="w-100 p-2"><a href="#">
+                        Import from Commons</li>
+                    <li className="w-100 p-2">
                         <i className="
                             fa fa-home
                             "></i>
-                        Choose Home Page</a></li>
-                    <li className="w-100 p-2"><a href="#">
+                        Choose Home Page</li>
+                    <li className="w-100 p-2">
                         <i className="
                             fa fa-comments
                             "></i>
-                        View Course Stream</a></li>
-                    <li className="w-100 p-2"><a href="#">
+                        View Course Stream</li>
+                    <li className="w-100 p-2">
                         <i className="
                             fa fa-bullhorn
                             "></i>
-                        New Announcement</a></li>
-                    <li className="w-100 p-2"><a href="#">
+                        New Announcement</li>
+                    <li className="w-100 p-2">
                         <i className="
                             fa fa-chart-line
                             "></i>
-                        New Analytics</a></li>
-                    <li className="w-100 p-2"><a href="#">
+                        New Analytics</li>
+                    <li className="w-100 p-2">
                         <i className="
                             fa fa-bell
                             "></i>
-                        Course Notifications</a></li>
+                        Course Notifications</li>
                 </ul>
                 <br />
+                <div>
                     <div>
-                        <div>
-                            <div className="
+                        <div className="
                             d-flex flex-row justify-content-between
                             ">
-                                <h2 className="fs-6 fw-bold m-0 text-center ">
-                                    To Do
-                                </h2>
-                            </div>
-                            <hr className="m-0 " />
-                                <ul className="comming-up-list" style={{
-                                    paddingLeft: "0px",
-                                }}>
-                                    <li className="d-flex gap-2 pt-2 ">
-                                        <i className="
+                            <h2 className="fs-6 fw-bold m-0 text-center ">
+                                To Do
+                            </h2>
+                        </div>
+                        <hr className="m-0 " />
+                        <ul className="comming-up-list" style={{
+                            paddingLeft: "0px",
+                        }}>
+                            <li className="d-flex gap-2 pt-2 ">
+                                <i className="
                                     fa fa-check-circle
                                     pt-2 text-red" style={{
                                         color: "#D41B2C",
                                     }}></i>
-                                        <div className="d-flex flex-column gap-0 ">
-                                            <a href="#" className="p-0 ">
-                                                Grade A1 - ENV + HTML
-                                            </a>
-                                            <span>
-                                                100pts | Sep 7 at 6:00pm
-                                            </span>
-                                        </div>
-                                    </li>
-                                </ul>
-                        </div>
-                        <br />
-                            <div>
-                                <div className="
+                                <div className="d-flex flex-column gap-0 ">
+                                    <span className='red-link p-0'>
+                                        <button className="p-0">
+                                            Grade A1 - ENV + HTML
+                                        </button>
+                                    </span>
+                                    <span>
+                                        100pts | Sep 7 at 6:00pm
+                                    </span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <br />
+                    <div>
+                        <div className="
                             d-flex flex-row justify-content-between
                             ">
-                                    <h2 className="fs-6 fw-bold m-0 text-center ">
-                                        Comming Up
-                                    </h2>
-                                    <a href="#" style={{
-                                        textDecoration: "none",
-                                        color: "#D41B2C",
-                                    }}>
-                                        <i className="
+                            <h2 className="fs-6 fw-bold m-0 text-center ">
+                                Comming Up
+                            </h2>
+                            <span className='red-link'>
+                                <button>
+                                    <i className="
                                     fa fa-calendar
                                     " style={{
-                                        color: "#9c9c9c",
-                                    }}></i>
-                                        View Calendar
-                                    </a>
+                                            color: "#9c9c9c",
+                                        }}></i>
+                                    View Calendar
+                                </button>
+                            </span>
+                        </div>
+                        <hr className="m-0 " />
+                        <ul className="comming-up-list d-flex flex-column gap-2 pt-2 " style={{
+                            paddingLeft: "0px",
+                        }}>
+                            <li className="d-flex gap-2 ">
+                                <i className="fa fa-calendar pt-2 "></i>
+                                <div className="d-flex flex-column gap-0 ">
+                                    <span className="red-link">
+                                        <button>
+                                            CS5610.12631.2024
+                                        </button>
+                                    </span>
+                                    <span>
+                                        Sep 7 at 6:00pm
+                                    </span>
                                 </div>
-                                <hr className="m-0 " />
-                                    <ul className="comming-up-list d-flex flex-column gap-2 pt-2 " style={{
-                                        paddingLeft: "0px",
-                                    }}>
-                                        <li className="d-flex gap-2 ">
-                                            <i className="fa fa-calendar pt-2 "></i>
-                                            <div className="d-flex flex-column gap-0 ">
-                                                <a href="#" className="p-0 ">
-                                                    CS5610.12631.2024
-                                                </a>
-                                                <span>
-                                                    Sep 7 at 6:00pm
-                                                </span>
-                                            </div>
-                                        </li>
-                                        <li className="d-flex gap-2">
-                                            <i className="fa fa-calendar pt-2 "></i>
-                                            <div className="d-flex flex-column gap-0 ">
-                                                <a href="#" className="p-0 ">
-                                                    CS5610.12631.2024
-                                                </a>
-                                                <span>
-                                                    Sep 9 at 6:00pm
-                                                </span>
-                                            </div>
-                                        </li>
-                                        <li className="d-flex gap-2">
-                                            <i className="fa fa-calendar pt-2 "></i>
-                                            <div className="d-flex flex-column gap-0 ">
-                                                <a href="#" className="p-0 ">
-                                                    CS5610.12631.2024
-                                                </a>
-                                                <span>
-                                                    Sep 14 at 6:00pm
-                                                </span>
-                                            </div>
-                                        </li>
-                                    </ul>
-                            </div>
+                            </li>
+                            <li className="d-flex gap-2">
+                                <i className="fa fa-calendar pt-2 "></i>
+                                <div className="d-flex flex-column gap-0 ">
+                                    <span className="red-link">
+                                        <button>
+                                            CS5610.12631.2024
+                                        </button>
+                                    </span>
+                                    <span>
+                                        Sep 9 at 6:00pm
+                                    </span>
+                                </div>
+                            </li>
+                            <li className="d-flex gap-2">
+                                <i className="fa fa-calendar pt-2 "></i>
+                                <div className="d-flex flex-column gap-0 ">
+                                    <span className="red-link">
+                                        <button>
+                                            CS5610.12631.2024
+                                        </button>
+                                    </span>
+                                    <span>
+                                        Sep 14 at 6:00pm
+                                    </span>
+                                </div>
+                            </li>
+                        </ul>
                     </div>
+                </div>
             </div>
         </>
     )

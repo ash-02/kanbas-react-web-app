@@ -1,6 +1,4 @@
-import { courses } from "../../Kanbas/Database";
-import { Navigate, Route, Routes, useParams } from "react-router-dom";
-import { HiMiniBars3 } from "react-icons/hi2";
+import { Navigate, Route, Routes } from "react-router-dom";
 import CourseNavigation from "./Navigation";
 import Breadcumb from "../Components/Breadcumb";
 import Modules from "./Modules";

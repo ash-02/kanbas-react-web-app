@@ -1,8 +1,6 @@
-import React from "react";
 import { Link } from "react-router-dom";
 import { courses } from "../Database";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { FaAccessibleIcon, FaCheckDouble, FaFileArchive, FaFileInvoice, FaFilePdf } from "react-icons/fa";
+import { FaFileInvoice } from "react-icons/fa";
 
 function Dashboard() {
     return (
@@ -26,7 +24,7 @@ function Dashboard() {
                                                 `/assets/images/${course.image}`
                                             } className="card-img-top" style={{
                                                 height: "150px"
-                                            }} />
+                                            }} alt="course-banner" />
                                             <div className="card-body">
                                                 <a className="card-title" href="${course.link}" style={{
                                                     textDecoration: "none",
