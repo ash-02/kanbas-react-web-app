@@ -81,12 +81,12 @@
                 </li>
                 <ul>
                     ${module.learningObjectives.map((objective) => {
-                        return `<li><i class="fa fa-ellipsis-v"></i>${objective}
+                    return `<li><i class="fa fa-ellipsis-v"></i>${objective}
                             <span class="float-end">
                                 <i class="fa fa-check-circle text-success"></i>
                                 <i class="fa fa-ellipsis-v ms-2"></i>
                             </span></li>`;
-                    }).join('')}
+                }).join('')}
                 </ul>
                 <li class="list-group-item">
                     <i class="fa fa-ellipsis-v"></i> Reading
@@ -97,12 +97,12 @@
                 </li>
                 <ul>
                     ${module.readings.map((reading) => {
-                        return `<li><i class="fa fa-ellipsis-v"></i>${reading}
+                    return `<li><i class="fa fa-ellipsis-v"></i>${reading}
                             <span class="float-end">
                                 <i class="fa fa-check-circle text-success"></i>
                                 <i class="fa fa-ellipsis-v ms-2"></i>
                             </span></li>`;
-                    }).join('')}
+                }).join('')}
                 </ul>
                 <li class="list-group-item">
                     <i class="fa fa-ellipsis-v"></i> Slides
@@ -113,19 +113,24 @@
                 </li>
                 <ul>
                     ${module.slides.map((slide) => {
-                        return `<li><a href="#"><i class="fa fa-ellipsis-v"></i>${slide}</a>
+                    return `<li><a href="#"><i class="fa fa-ellipsis-v"></i>${slide}</a>
                             <span class="float-end">
                                 <i class="fa fa-check-circle text-success"></i>
                                 <i class="fa fa-ellipsis-v ms-2"></i>
                             </span></li>`;
-                    }).join('')}
+                }).join('')}
                 </ul>
             </ul>
         </li>                
                 `)
             });
         </script>
-        <!-- <li class="list-group-item">
+    </ul>
+</body>
+
+</html>
+
+<!-- <li class="list-group-item">
             <div>
                 <i class="fa fa-ellipsis-v"></i> Week 1
                 <span class="float-end">
@@ -193,7 +198,3 @@
                 </span>
             </div>
         </li> -->
-    </ul>
-</body>
-
-</html>

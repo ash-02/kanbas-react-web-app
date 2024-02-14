@@ -5,11 +5,17 @@ import Courses from "./Courses";
 
 function Kanbas() {
     return (
-        <div className="d-flex">
+        <div className="d-flex" style={{
+            height: "100vh",
+        }}>
             <div className="d-none d-md-block ">
                 <KanbasNavigation />
             </div>
-            <div style={{ flexGrow: 1 }}>
+            <div style={{
+                flexGrow: 1,
+                height: "100%",
+                overflowY: "scroll",
+            }}>
                 <Routes>
                     <Route path="/" element={<Navigate to="Dashboard" />} />
                     <Route path="Account" element={<h1>Account</h1>} />

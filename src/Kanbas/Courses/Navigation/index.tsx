@@ -13,7 +13,7 @@ function CourseNavigation() {
         //     ))}
         // </ul>
         <>
-            <div className="d-none d-md-block ">
+            <div className="d-none d-md-block h-100 ">
                 <ul className="wd-navigation">
                     {
                         links.map((link, index) => (
@@ -61,9 +61,9 @@ function CourseNavigation() {
                         }}>
                             CS5610.12631.2024
                             <br />
-                                <span>
-                                    Home
-                                </span>
+                            <span>
+                                Home
+                            </span>
                         </h6>
                     </div>
                     <div>
@@ -73,11 +73,14 @@ function CourseNavigation() {
                     </div>
                 </div>
                 <ul className="h-100">
-                    <li><a href="/kanbas/courses/home/screen.html">
-                        <i className="
-                fa fa-home
-                "></i>
-                        Home</a></li>
+                    <Link to="/kanbas/courses/home/screen.html">
+                        <li>
+                            <a href="/kanbas/courses/home/screen.html">
+                                <i className="fa fa-home"></i>
+                                Home
+                            </a>
+                        </li>
+                    </Link>
                     <li className="wd-active"><a href="/kanbas/courses/modules/screen.html">
                         <i className="
                 fa fa-th-large
