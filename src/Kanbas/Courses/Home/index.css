@@ -19,6 +19,11 @@ ul {
     border: 1px solid #dfdede;
     background-color: #F5F5F5;
     border-radius: 4px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0.5rem;
 }
 
 .course-status-button-group :nth-child(2){
@@ -32,6 +37,12 @@ ul {
     height: 2.5rem;
     text-align: left;
     border-radius: 4px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 0.5rem;
+    align-items: center;
+
 }
 
 .course-status-list li a {

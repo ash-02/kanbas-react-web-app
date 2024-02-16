@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./index.css";
 import { modules } from "../../Database";
-import { FaEllipsisV, FaCheckCircle, FaPlusCircle } from "react-icons/fa";
+import { FaEllipsisV, FaCheckCircle, FaPlusCircle, FaPlus } from "react-icons/fa";
 import { useParams } from "react-router";
 
 function ModuleList() {
@@ -22,9 +22,15 @@ function ModuleList() {
                         <option value="Publish">Publish</option>
                         <option value="Unpublish">Unpublish</option>
                     </select>
-                    <button className="bg-danger text-white p-2 "><i className="fa fa-plus m-0 "></i> Module</button>
-                    <button className="p-2"><i className="fa fa-ellipsis-v px-1" style={{ padding: "0%" }}></i></button>
+                    <button className="bg-danger text-white p-2 ">
+                        <FaPlus />
+                        Module
+                    </button>
+                    <button className="p-2">
+                        <FaEllipsisV />
+                    </button>
                 </div>
+                <hr />
                 {/* <!-- Add buttons here --> */}
                 <ul className="list-group wd-modules">
                     {modulesList.map((module) => (

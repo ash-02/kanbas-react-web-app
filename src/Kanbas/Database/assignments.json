@@ -1,17 +1,38 @@
 [
     {
         "_id": "A101",
-        "title": "Propulsion Assignment",
+        "title": "A1 - ENV + HTML",
+        "due": "Sep 18, 2023",
         "course": "RS101"
     },
     {
         "_id": "A102",
-        "title": "Combustion Analysis",
+        "title": "A2 - CSS + Bootstrap",
+        "due": "Sep 25, 2023",
         "course": "RS101"
     },
     {
         "_id": "A103",
-        "title": "Nozzle Design Project",
+        "title": "A3 - JS + React",
+        "due": "Oct 2, 2023",
+        "course": "RS101"
+    },
+    {
+        "_id": "A104",
+        "title": "A4 - State + Redux",
+        "due": "Oct 9, 2023",
+        "course": "RS101"
+    },
+    {
+        "_id": "A105",
+        "title": "A5 - Node + Session",
+        "due": "Oct 16, 2023",
+        "course": "RS101"
+    },
+    {
+        "_id": "A106",
+        "title": "A6 - MongoDB",
+        "due": "Oct 23, 2023",
         "course": "RS101"
     },
     {

@@ -10,16 +10,20 @@ import './index.css';
 
 function Courses() {
     return (
-        <div className="p-4 h-100 ">
+        <div className="p-md-4 p-0 h-100 ">
             <div className="">
                 <Breadcumb />
                 <hr />
             </div>
-            <div className=" d-flex flex-row" style={{
+            <div className=" d-flex flex-row p-2" style={{
             }}>
-                <CourseNavigation />
+                <div className="
+                d-none d-md-block
+                ">
+                    <CourseNavigation />
+                </div>
                 <div
-                className="flex-grow-1 "
+                className="flex-grow-1 w-md-100 w-50"
                 style={{ left: "320px", top: "50px", height: "100%" }} >
                 <Routes>
                     <Route path="/" element={<Navigate to="Home" />} />

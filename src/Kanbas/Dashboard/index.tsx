@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { courses } from "../Database";
 import { FaFileInvoice } from "react-icons/fa";
+import "./index.css";
 
 function Dashboard() {
     return (
@@ -16,9 +17,7 @@ function Dashboard() {
                         {
                             courses.map((course) => {
                                 return (
-                                    <div className="col" style={{
-                                        width: "300px"
-                                    }}>
+                                    <div className="col">
                                         <div className="card">
                                             <img src={
                                                 `/assets/images/${course.image}`
@@ -26,11 +25,7 @@ function Dashboard() {
                                                 height: "150px"
                                             }} alt="course-banner" />
                                             <div className="card-body">
-                                                <a className="card-title" href="${course.link}" style={{
-                                                    textDecoration: "none",
-                                                    color: "navy",
-                                                    fontWeight: "bold"
-                                                }}>
+                                                <a className="card-title" href="${course.link}" >
                                                     {course.name}
                                                 </a>
                                                 <p className="card-text">

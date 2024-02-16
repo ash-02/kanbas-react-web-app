@@ -1,4 +1,5 @@
 import "./index.css"
+import { FaBan, FaCheck, FaFileImport, FaUpload, FaHome, FaComments, FaBullhorn, FaChartLine, FaBell, FaCalendar, FaCheckCircle } from "react-icons/fa"
 
 const StatusBar = () => {
     return (
@@ -11,11 +12,11 @@ const StatusBar = () => {
                 }}>Course Status</h3>
                 <div className="course-status-button-group w-100 d-flex flex-row">
                     <button className="w-100 p-2 ">
-                        <i className="fa fa-ban"></i>
+                        <FaBan />
                         Unpublish
                     </button>
                     <button className="w-100 p-2 ">
-                        <i className="fa fa-check"></i>
+                        <FaCheck />
                         Published
                     </button>
                 </div>
@@ -23,37 +24,27 @@ const StatusBar = () => {
                       course-status-list d-flex flex-column w-100 p-0 gap-1 mt-3 fs-6
                       ">
                     <li className="w-100 p-2">
-                        <i className="fa-solid fa-file-import"></i>
+                        <FaFileImport />
                         Import Existing Content</li>
                     <li className="w-100 p-2">
-                        <i className="
-                            fa fa-upload
-                            "></i>
+                        <FaFileImport />
+
                         Import from Commons</li>
                     <li className="w-100 p-2">
-                        <i className="
-                            fa fa-home
-                            "></i>
+                        <FaHome />
+
                         Choose Home Page</li>
                     <li className="w-100 p-2">
-                        <i className="
-                            fa fa-comments
-                            "></i>
+                        <FaComments />
                         View Course Stream</li>
                     <li className="w-100 p-2">
-                        <i className="
-                            fa fa-bullhorn
-                            "></i>
+                        <FaBullhorn />
                         New Announcement</li>
                     <li className="w-100 p-2">
-                        <i className="
-                            fa fa-chart-line
-                            "></i>
+                        <FaChartLine />
                         New Analytics</li>
                     <li className="w-100 p-2">
-                        <i className="
-                            fa fa-bell
-                            "></i>
+                        <FaBell />
                         Course Notifications</li>
                 </ul>
                 <br />
@@ -71,11 +62,14 @@ const StatusBar = () => {
                             paddingLeft: "0px",
                         }}>
                             <li className="d-flex gap-2 pt-2 ">
-                                <i className="
+                                {/* <i className="
                                     fa fa-check-circle
                                     pt-2 text-red" style={{
                                         color: "#D41B2C",
-                                    }}></i>
+                                    }}></i> */}
+                                <FaCheckCircle className="pt-2 text-red fs-3" style={{
+                                    color: "#D41B2C",
+                                }} />
                                 <div className="d-flex flex-column gap-0 ">
                                     <span className='red-link p-0'>
                                         <button className="p-0">
@@ -99,11 +93,14 @@ const StatusBar = () => {
                             </h2>
                             <span className='red-link'>
                                 <button>
-                                    <i className="
+                                    {/* <i className="
                                     fa fa-calendar
                                     " style={{
                                             color: "#9c9c9c",
-                                        }}></i>
+                                        }}></i> */}
+                                    {/* <FaCalendar style={{
+                                        color: "#9c9c9c",
+                                    }} /> */}
                                     View Calendar
                                 </button>
                             </span>
@@ -113,7 +110,7 @@ const StatusBar = () => {
                             paddingLeft: "0px",
                         }}>
                             <li className="d-flex gap-2 ">
-                                <i className="fa fa-calendar pt-2 "></i>
+                                <FaCalendar className="pt-2 fs-4" />
                                 <div className="d-flex flex-column gap-0 ">
                                     <span className="red-link">
                                         <button>
@@ -126,7 +123,7 @@ const StatusBar = () => {
                                 </div>
                             </li>
                             <li className="d-flex gap-2">
-                                <i className="fa fa-calendar pt-2 "></i>
+                                <FaCalendar className="pt-2 fs-4" />
                                 <div className="d-flex flex-column gap-0 ">
                                     <span className="red-link">
                                         <button>
@@ -139,7 +136,7 @@ const StatusBar = () => {
                                 </div>
                             </li>
                             <li className="d-flex gap-2">
-                                <i className="fa fa-calendar pt-2 "></i>
+                                <FaCalendar className="pt-2 fs-4" />
                                 <div className="d-flex flex-column gap-0 ">
                                     <span className="red-link">
                                         <button>
