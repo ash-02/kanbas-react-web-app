@@ -1,7 +1,8 @@
-import React from "react";
-import { useNavigate, useParams, Link } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { assignments } from "../../../Database";
 import "../index.css";
+import { FaCheckCircle, FaEllipsisV, FaPlus } from "react-icons/fa";
+import { IoCloseSharp } from "react-icons/io5";
 
 
 function AssignmentEditor() {
@@ -12,32 +13,18 @@ function AssignmentEditor() {
     const navigate = useNavigate();
     const handleSave = () => {
         console.log("Actually saving assignment TBD in later assignments");
-        navigate(`/Kanbas/Courses/${courseId}/Assignments`);
+        navigate(`/Kanbas/courses/${courseId}/Assignments`);
     };
     return (
         <div>
-            {/* <h2>Assignment Name</h2>
-            <input value={assignment?.title}
-                className="form-control mb-2" />
-            <button onClick={handleSave} className="btn btn-success ms-2 float-end">
-                Save
-            </button>
-            <Link to={`/Kanbas/Courses/${courseId}/Assignments`}
-                className="btn btn-danger float-end">
-                Cancel
-            </Link> */}
             <div className="d-flex flex-column">
                 <div className="d-flex flex-row justify-content-end align-items-center gap-4 ">
-                    <h3 className="m-0 fs-6 text-green">
-                        <i className="
-                                fa fa-check-circle
-                                "></i>
+                    <h3 className="icon-button m-0 fs-6 text-green bg-transparent border-0 ">
+                        <FaCheckCircle />
                         Published
                     </h3>
                     <button className="icon-button p-2 px-3 ">
-                        <i className="
-                                fa fa-ellipsis-v
-                                "></i>
+                        <FaEllipsisV />
                     </button>
                 </div>
                 <hr />
@@ -46,7 +33,9 @@ function AssignmentEditor() {
                         Assignment Name
                         <br />
                         <input className="input-tags" type="text" name="assignment-name" id="assignment-name"
-                            value="A1 - ENV + HTML" placeholder="A1 - ENV + HTML" />
+                            value={
+                                assignment?.title
+                            } placeholder="Enter the Assignment Title" />
                     </label>
                     <textarea className="input-tags" name="" id="" cols={30}
                         rows={5} >This assignment describes how to install and use HTML for Creating a website. This assignment describes how to install and use HTML for Creating a website. This assignment describes how to install and use HTML for Creating a website. This assignment describes how to install and use HTML for Creating a website. This assignment describes how to install and use HTML for Creating a website.
@@ -148,9 +137,7 @@ function AssignmentEditor() {
                                 border: "1px solid #E0E0E0",
                                 borderTop: "none"
                             }}>
-                                <i className="
-                                            fa fa-plus
-                                            "></i>
+                                <FaPlus />
                                 Add
                             </button>
                         </div>
@@ -174,9 +161,7 @@ function AssignmentEditor() {
                                                 <span>
                                                     Everyone
                                                 </span>
-                                                <i className="
-                                                            fa fa-close
-                                                            "></i>
+                                                <IoCloseSharp />
                                             </div>
                                         </div>
                                     </div>
@@ -212,9 +197,7 @@ function AssignmentEditor() {
                                 border: "1px solid #E0E0E0",
                                 borderTop: "none"
                             }} className="">
-                                <i className="
-                                            fa fa-plus
-                                            "></i>
+                                <FaPlus />
                                 Add
                             </button>
                         </div>
@@ -223,15 +206,17 @@ function AssignmentEditor() {
                 <div className="">
                     <hr />
                     <div className="d-flex flex-md-row flex-column justify-content-between align-items-md-start align-items-center gap-4 fs-6 ">
-                        <label htmlFor="" className="fs-6 ">
+                        <label htmlFor="" className="fs-6 h-100  d-flex align-items-center justify-content-center gap-3 ">
                             <input type="checkbox" name="" id="" />
                             Notify users that this content has changed
                         </label>
-                        <div className="submission-button-grp">
-                            <button onClick={() => window.location.href = '/kanbas/courses/assignments/index.html'}>
+                        <div className="submission-button-grp
+                        d-flex gap-3
+                        ">
+                            <button onClick={() => handleSave()}>
                                 Cancel
                             </button>
-                            <button onClick={() => window.location.href = '/kanbas/courses/assignments/index.html'}>
+                            <button onClick={() => handleSave()}>
                                 Save
                             </button>
                         </div>

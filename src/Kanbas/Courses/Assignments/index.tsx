@@ -62,7 +62,7 @@ function Assignments() {
                                     <FaEllipsisV />
                                     <FaList />
                                     <div className="assignment-title-link d-flex flex-column">
-                                        <Link to={`/Kanbas/Courses/${courseId}/Assignments/${assignment._id}`}>{assignment.title}</Link>
+                                        <Link to={`/Kanbas/courses/${courseId}/Assignments/${assignment._id}`}>{assignment.title}</Link>
                                         <span>{
                                             assignment.due ? "Due " + assignment.due : "No due date"
                                         } | 100 pts </span>
@@ -70,11 +70,14 @@ function Assignments() {
                                 </div>
                                 <span className="d-flex flex-row gap-2 align-items-center ">
                                     <FaCheckCircle className="text-success" />
-                                    <a href="/kanbas/courses/assignments/Edit/screen.html" style={{
+                                    {/* <a href="/kanbas/courses/assignments/Edit/screen.html" style={{
                                         color: "black"
                                     }}>
                                         <FaEllipsisV />
-                                    </a>
+                                    </a> */}
+                                    <Link to={`/kanbas/courses/${courseId}/Assignments/${assignment._id}`} className="text-black">
+                                        <FaEllipsisV />
+                                    </Link>
                                 </span>
                             </li>
                         ))

@@ -44,42 +44,17 @@ function KanbasNavigation() {
                         <i className="fa fa-close text-red"></i>
                     </a>
                 </div>
-                <ul className="p-5 list-unstyled m-0 d-flex flex-column justify-content-center gap-5 h-100 w-100 ">
-                    <li><a href="/kanbas/dashboard/screen.html"><i className="
-                fa fa-tachometer fs-1
-                "></i>Dashboard</a></li>
-                    <li><a href="/kanbas/account/profile/screen.html"><i className="
-                fa fa-user fs-1
-                "></i>Account</a><i className="
-                fa fa-caret-right float-end
-                "></i></li>
-                    <li><a href="/kanbas/courses/navigation/index.html"><i className="
-                fa fa-book fs-1
-                "></i>Courses</a><i className="
-                fa fa-caret-right float-end
-                "></i></li>
-                    <li><a href="#"><i className="
-                fa fa-calendar fs-1
-                "></i>Calendar</a></li>
-                    <li><a href="#"><i className="
-                fa fa-inbox fs-1
-                "></i>Inbox</a></li>
-                    <li><a href="#"><i className="
-                fa fa-comments fs-1
-                "></i>Studio</a></li>
-                    <li><a href="#"><i className="
-                fa fa-comments fs-1
-                "></i>Commons</a></li>
-                    <li><a href="#"><i className="
-                fa fa-history fs-1
-                "></i>History</a><i className="
-                fa fa-caret-right float-end
-                "></i></li>
-                    <li><a href="#"><i className="
-                fa fa-question-circle fs-1
-                "></i>Help</a><i className="
-                fa fa-caret-right float-end
-                "></i></li>
+                <ul className="p-5 list-unstyled m-0 d-flex flex-column justify-content-start gap-5 h-100 w-100 ">
+                    {
+                        links.map((link, index) => (
+                            <li key={index} className={pathname.includes(link.label.toLowerCase()) ? "active" : ""}>
+                                <Link to={`/kanbas/${link.label.toLowerCase()}`}>
+                                    {link.icon}
+                                    {link.label}
+                                </Link>
+                            </li>
+                        ))
+                    }
                 </ul>
             </div>
         </>

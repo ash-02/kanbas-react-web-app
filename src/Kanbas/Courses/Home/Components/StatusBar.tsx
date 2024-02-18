@@ -1,10 +1,10 @@
 import "./index.css"
-import { FaBan, FaCheck, FaFileImport, FaUpload, FaHome, FaComments, FaBullhorn, FaChartLine, FaBell, FaCalendar, FaCheckCircle } from "react-icons/fa"
+import { FaBan, FaCheck, FaFileImport, FaHome, FaComments, FaBullhorn, FaChartLine, FaBell, FaCalendar, FaCheckCircle } from "react-icons/fa"
 
 const StatusBar = () => {
     return (
         <>
-            <div className="flex-grow-0 mt-2 d-none d-lg-block p-2" style={{
+            <div className="flex-grow-0 d-none d-lg-block p-2 pt-0" style={{
                 width: "250px",
             }}>
                 <h3 style={{

@@ -4,16 +4,20 @@ import { courses } from "../../Kanbas/Database";
 import { Link, useParams } from "react-router-dom";
 import { Routes, Route, Navigate } from "react-router-dom";
 import CourseNavigation from "../Courses/Navigation";
+import Button from 'react-bootstrap/Button';
+import Collapse from 'react-bootstrap/Collapse';
 import './index.css';
+import { useState } from "react";
 
 const Breadcumb = () => {
 
+    const [open, setOpen] = useState(false);
     const { courseId } = useParams();
     const course = courses.find((course) => course._id === courseId);
 
     return (
         <>
-            <div className="bc p-2 d-md-flex flex-row gap-4 align-items-center d-none ">
+            <div className="bc p-2 d-md-flex flex-row gap-4 align-items-center d-none " >
                 <HiMiniBars3 />
                 <nav aria-label="breadcrumb">
                     <ol className="breadcrumb
@@ -45,7 +49,7 @@ const Breadcumb = () => {
                         textAlign: "center"
                     }}>
                         {course?._id}
-                        <br/>
+                        <br />
                         <Routes>
                             <Route path="/" element={<Navigate to="Home" />} />
                             <Route path="Home" element={<span>Home</span>} />
@@ -61,9 +65,21 @@ const Breadcumb = () => {
                     {/* <a href="/Kanbas/courses/navigation/index.html" className="text-white ">
                         <FaCaretDown />
                     </a> */}
-                    <Link to="/kanbas/courses/navigation/index.tsx">
+                    {/* <Link to="/kanbas/courses/navigation/index.tsx">
                         <FaCaretDown />
-                    </Link>
+                    </Link> */}
+                    <Button
+                        onClick={() => setOpen(!open)}
+                        aria-controls="example-collapse-text"
+                        aria-expanded={open}
+                    >
+                        click
+                    </Button>
+                    <Collapse in={open}>
+                        <div id="example-collapse-text">
+                            <CourseNavigation />
+                        </div>
+                    </Collapse>
                 </div>
             </div>
         </>
