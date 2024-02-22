@@ -1,20 +1,22 @@
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import "./index.css";
+import { CourseNavContext } from "..";
+import { useContext, useEffect } from "react";
+
 function CourseNavigation() {
     const links = ["Home", "Modules", "Piazza", "Grades", "Assignments"];
     const { pathname } = useLocation();
     const navigate = useNavigate();
 
     const handleNav = (link: string) => {
-        console.log(link);
         navigate("/kanbas/courses/" + link);
     };
 
-    // const handleMobileNavClick = (link: string) => {
-    //     console.log(link);
-    //     navigate("/kanbas/courses/" + link);
-    //     window.location.reload();
-    // }
+    const { openMobileCourseNav, setOpenMobileCourseNav } = useContext(CourseNavContext);
+
+    const handleCourseNavClick = () => {
+        setOpenMobileCourseNav(!openMobileCourseNav);
+    }
 
     return (
         <>
@@ -38,7 +40,9 @@ function CourseNavigation() {
                         links.map((link, index) => (
                             <li key={index}
                                 className={pathname.includes(link) ? "wd-active" : ""}>
-                                <Link to={link}>{link}</Link>
+                                <Link to={link} onClick={
+                                    () => handleCourseNavClick()
+                                }>{link}</Link>
                             </li>
                         ))
                     }

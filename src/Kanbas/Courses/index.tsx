@@ -1,4 +1,4 @@
-import { Navigate, Route, Routes } from "react-router-dom";
+import { Link, Navigate, Route, Routes } from "react-router-dom";
 import CourseNavigation from "./Navigation";
 import Navigation from "../Navigation";
 import Modules from "./Modules";
@@ -14,6 +14,14 @@ import { useParams } from "react-router-dom";
 import Button from 'react-bootstrap/Button';
 import Collapse from 'react-bootstrap/Collapse';
 import { useEffect, useState } from "react";
+import { useContext, createContext } from "react";
+
+export const CourseNavContext = createContext(
+    {
+        openMobileCourseNav: false,
+        setOpenMobileCourseNav: (value: boolean) => { }
+    }
+);
 
 function Courses() {
 
@@ -37,7 +45,6 @@ function Courses() {
         if (width > 768) {
             setOpenMobileCourseNav(false);
             setOpenMobileMainNav(false);
-            console.log("width > 768");
         }
     }, [width]);
 
@@ -52,7 +59,11 @@ function Courses() {
                         m-0
                         ">
                             <li className="prime breadcrumb-item m-0 ">
-                                {course?._id}
+                                <Link to={
+                                    `/kanbas/courses/${course?._id}`
+                                }>
+                                    {course?._id}
+                                </Link>
                             </li>
                             <li className="breadcrumb-item active" aria-current="page">
                                 <Routes>
@@ -115,16 +126,21 @@ function Courses() {
                     openMobileCourseNav ? "d-none d-md-block" : ""
                 } />
             </div>
-            <Collapse in={openMobileCourseNav}>
-                <div id="mobile-course-nav">
-                    <CourseNavigation />
-                </div>
-            </Collapse>
-            <Collapse in={openMobileMainNav}>
-                <div id="mobile-main-nav">
-                    <Navigation />
-                </div>
-            </Collapse>
+            <CourseNavContext.Provider value={{
+                openMobileCourseNav,
+                setOpenMobileCourseNav
+            }}>
+                <Collapse in={openMobileCourseNav}>
+                    <div id="mobile-course-nav">
+                        <CourseNavigation />
+                    </div>
+                </Collapse>
+                <Collapse in={openMobileMainNav}>
+                    <div id="mobile-main-nav">
+                        <Navigation />
+                    </div>
+                </Collapse>
+            </CourseNavContext.Provider>
             <div className={
                 openMobileCourseNav || openMobileMainNav ? "d-none" : " d-flex flex-row p-2 gap-4"
             }>
