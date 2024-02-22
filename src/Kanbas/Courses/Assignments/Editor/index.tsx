@@ -38,7 +38,8 @@ function AssignmentEditor() {
                             } placeholder="Enter the Assignment Title" />
                     </label>
                     <textarea className="input-tags" name="" id="" cols={30}
-                        rows={5} >This assignment describes how to install and use HTML for Creating a website. This assignment describes how to install and use HTML for Creating a website. This assignment describes how to install and use HTML for Creating a website. This assignment describes how to install and use HTML for Creating a website. This assignment describes how to install and use HTML for Creating a website.
+                        rows={5} >
+                        {assignment?.description}
                     </textarea>
                 </div>
                 <div className="input-label-grps d-flex flex-column gap-2 ">
@@ -118,15 +119,6 @@ function AssignmentEditor() {
                                     </div>
                                 </div>
                             </div>
-                            {/* width: 100%;
-    background-color: #F5F5F5;
-    color: black;
-    text-align: center;
-    border: 1px solid #E0E0E0;
-    border-top: none;
-    border-radius: 5px;
-    border-top-left-radius: 0%;
-    border-top-right-radius: 0%; */}
                             <button className="secondary-button" style={{
                                 width: "100%",
                                 backgroundColor: "#f5f5f5",
@@ -169,7 +161,7 @@ function AssignmentEditor() {
                                         <label htmlFor="">
                                             Due
                                         </label>
-                                        <input type="date" value="2023-09-18" />
+                                        <input type="date" value={assignment?.due} />
                                     </div>
                                     <div className="w-100 d-flex gap-2 ">
                                         <div className="w-50">

@@ -1,11 +1,11 @@
 [
     {
         "_id": "RS101",
-        "name": "Rocket Propulsion",
+        "name": "Web Development",
         "number": "RS4550",
         "startDate": "2023-01-10",
         "endDate": "2023-05-15",
-        "image": "javabg.jpg"
+        "image" : "reactjs.jpg"
     },
     {
         "_id": "RS102",
@@ -13,7 +13,7 @@
         "number": "RS4560",
         "startDate": "2023-01-10",
         "endDate": "2023-05-15",
-        "image": "reactjs.jpg"
+        "image": "javabg.jpg"
     },
     {
         "_id": "RS103",

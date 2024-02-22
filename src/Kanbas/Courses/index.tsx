@@ -14,7 +14,7 @@ import { useParams } from "react-router-dom";
 import Button from 'react-bootstrap/Button';
 import Collapse from 'react-bootstrap/Collapse';
 import { useEffect, useState } from "react";
-import { useContext, createContext } from "react";
+import { createContext } from "react";
 
 export const CourseNavContext = createContext(
     {
@@ -122,9 +122,7 @@ function Courses() {
                         </Button>
                     </div>
                 </div>
-                <hr className={
-                    openMobileCourseNav ? "d-none d-md-block" : ""
-                } />
+                <hr className="d-none d-md-block" />
             </div>
             <CourseNavContext.Provider value={{
                 openMobileCourseNav,

@@ -1,7 +1,7 @@
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import "./index.css";
 import { CourseNavContext } from "..";
-import { useContext, useEffect } from "react";
+import { useContext } from "react";
 
 function CourseNavigation() {
     const links = ["Home", "Modules", "Piazza", "Grades", "Assignments"];

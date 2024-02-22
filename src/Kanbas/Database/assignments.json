@@ -2,38 +2,44 @@
     {
         "_id": "A101",
         "title": "A1 - ENV + HTML",
-        "due": "Sep 18, 2023",
-        "course": "RS101"
+        "due": "2023-09-18",
+        "course": "RS101",
+        "description": "Create a simple HTML page with a form and a table. Use the form to submit data to the server and display the data in the table. Use the environment variables to store the server URL."
     },
     {
         "_id": "A102",
         "title": "A2 - CSS + Bootstrap",
-        "due": "Sep 25, 2023",
-        "course": "RS101"
+        "due": "2023-09-25",
+        "course": "RS101",
+        "description": "Style the HTML page created in A1 using CSS and Bootstrap. Make the page responsive and visually appealing. Use the Bootstrap grid system to layout the form and the table."
     },
     {
         "_id": "A103",
         "title": "A3 - JS + React",
-        "due": "Oct 2, 2023",
-        "course": "RS101"
+        "due": "2023-10-02",
+        "course": "RS101",
+        "description": "Add client-side validation to the form created in A1 using JavaScript. Use React to create a component that displays the form and the table. Use the React state to manage the form data."
     },
     {
         "_id": "A104",
         "title": "A4 - State + Redux",
-        "due": "Oct 9, 2023",
-        "course": "RS101"
+        "due": "2023-10-09",
+        "course": "RS101",
+        "description": "Use the React state to manage the form data and the Redux store to manage the table data. Create actions and reducers to update the store. Use the Redux DevTools to inspect the store."
     },
     {
         "_id": "A105",
         "title": "A5 - Node + Session",
-        "due": "Oct 16, 2023",
-        "course": "RS101"
+        "due": "2023-10-16",
+        "course": "RS101",
+        "description": "Create a Node.js server that handles the form submission. Use the Express.js framework to handle the form submission and store the data in the session. Use the session to store the form data."
     },
     {
         "_id": "A106",
         "title": "A6 - MongoDB",
-        "due": "Oct 23, 2023",
-        "course": "RS101"
+        "due": "2023-10-23",
+        "course": "RS101",
+        "description": "Create a MongoDB database to store the form data. Use Mongoose to connect to the database and create a schema for the form data. Use the schema to store the form data in the database."
     },
     {
         "_id": "A201",
