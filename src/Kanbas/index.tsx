@@ -17,7 +17,7 @@ function Kanbas() {
                 overflowY: "scroll",
             }}>
                 <Routes>
-                    <Route path="/" element={<Navigate to="Dashboard" />} />
+                    <Route path="/" element={<Navigate to="dashboard" />} />
                     <Route path="Account" element={<h1>Account</h1>} />
                     <Route path="Dashboard" element={<Dashboard />} />
                     <Route path="Courses/:courseId/*" element={<Courses />} />

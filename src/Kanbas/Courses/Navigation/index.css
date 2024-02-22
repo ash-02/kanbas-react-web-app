@@ -18,12 +18,20 @@
     padding: 10px 0 10px 10px;
 }
 
+.wd-navigation li a:hover {
+    text-decoration: underline;
+}
+
 .wd-navigation li.wd-active {
     border-left: 2px solid black;
 }
 
 .wd-navigation li.wd-active a {
     color: black;
+}
+
+.wd-navigation li.wd-active a:hover {
+    text-decoration: none;
 }
 
 .wd-navigation a {

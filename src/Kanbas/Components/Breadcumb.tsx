@@ -41,7 +41,7 @@ const Breadcumb = () => {
                 </nav>
             </div>
             <div className="d-md-none d-flex flex-row justify-content-between align-items-center bg-black text-white px-4">
-                <a href="/Kanbas/navigation/index.html" className="text-white">
+                <a href="/kanbas/navigation/index.html" className="text-white">
                     <HiMiniBars3 />
                 </a>
                 <div className="p-2">

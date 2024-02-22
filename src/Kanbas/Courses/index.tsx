@@ -13,7 +13,7 @@ import { courses } from "../../Kanbas/Database";
 import { useParams } from "react-router-dom";
 import Button from 'react-bootstrap/Button';
 import Collapse from 'react-bootstrap/Collapse';
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 function Courses() {
 
@@ -21,6 +21,26 @@ function Courses() {
     const [openMobileMainNav, setOpenMobileMainNav] = useState(false);
     const { courseId } = useParams();
     const course = courses.find((course) => course._id === courseId);
+    const [width, setWidth] = useState(window.innerWidth);
+
+    useEffect(() => {
+        const handleResize = () => {
+            setWidth(window.innerWidth);
+        };
+        window.addEventListener('resize', handleResize);
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        };
+    }, []);
+
+    useEffect(() => {
+        if (width > 768) {
+            setOpenMobileCourseNav(false);
+            setOpenMobileMainNav(false);
+            console.log("width > 768");
+        }
+    }, [width]);
+
 
     return (
         <div className="p-md-4 p-0 h-100 ">
@@ -31,7 +51,7 @@ function Courses() {
                         <ol className="breadcrumb
                         m-0
                         ">
-                            <li className="breadcrumb-item m-0 ">
+                            <li className="prime breadcrumb-item m-0 ">
                                 {course?._id}
                             </li>
                             <li className="breadcrumb-item active" aria-current="page">

@@ -1,5 +1,5 @@
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import "./index.css"; // feel free to use the CSS from previous assignments
+import "./index.css";
 function CourseNavigation() {
     const links = ["Home", "Modules", "Piazza", "Grades", "Assignments"];
     const { pathname } = useLocation();
@@ -10,6 +10,12 @@ function CourseNavigation() {
         navigate("/kanbas/courses/" + link);
     };
 
+    // const handleMobileNavClick = (link: string) => {
+    //     console.log(link);
+    //     navigate("/kanbas/courses/" + link);
+    //     window.location.reload();
+    // }
+
     return (
         <>
             <div className="d-none d-md-block h-100 ">
@@ -18,7 +24,9 @@ function CourseNavigation() {
                         links.map((link, index) => (
                             <li key={index}
                                 className={pathname.includes(link) ? "wd-active" : ""}>
-                                <Link to={link}>{link}</Link>
+                                <Link onClick={
+                                    () => handleNav(link.toLowerCase())
+                                } to={link}>{link}</Link>
                             </li>
                         ))
                     }
@@ -30,9 +38,7 @@ function CourseNavigation() {
                         links.map((link, index) => (
                             <li key={index}
                                 className={pathname.includes(link) ? "wd-active" : ""}>
-                                <Link onClick={
-                                    () => handleNav(link.toLowerCase())
-                                } to={link}>{link}</Link>
+                                <Link to={link}>{link}</Link>
                             </li>
                         ))
                     }
