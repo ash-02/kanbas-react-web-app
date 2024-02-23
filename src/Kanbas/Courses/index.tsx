@@ -62,7 +62,7 @@ function Courses() {
                                 <Link to={
                                     `/kanbas/courses/${course?._id}`
                                 }>
-                                    {course?._id}
+                                    {course?.number}
                                 </Link>
                             </li>
                             <li className="breadcrumb-item active" aria-current="page">
@@ -95,7 +95,7 @@ function Courses() {
                         <h6 className="m-0" style={{
                             textAlign: "center"
                         }}>
-                            {course?._id}
+                            {course?.number}
                             <br />
                             <Routes>
                                 <Route path="/" element={<Navigate to="Home" />} />

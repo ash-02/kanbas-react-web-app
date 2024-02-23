@@ -25,9 +25,6 @@ function Dashboard() {
                                                 height: "150px"
                                             }} alt="course-banner" />
                                             <div className="card-body">
-                                                {/* <a className="card-title" href="${course.link}" >
-                                                    {course.name}
-                                                </a> */}
                                                 <Link to={`/kanbas/courses/${course._id}`} className="text-black">
                                                     {course.name}
                                                 </Link>
