@@ -9,7 +9,6 @@ import Grades from "./Grades";
 import './index.css';
 import { HiMiniBars3 } from "react-icons/hi2";
 import { FaCaretDown } from "react-icons/fa";
-import { courses } from "../../Kanbas/Database";
 import { useParams } from "react-router-dom";
 import Button from 'react-bootstrap/Button';
 import Collapse from 'react-bootstrap/Collapse';
@@ -23,7 +22,7 @@ export const CourseNavContext = createContext(
     }
 );
 
-function Courses() {
+function Courses({ courses }: { courses: any[]; }) {
 
     const [openMobileCourseNav, setOpenMobileCourseNav] = useState(false);
     const [openMobileMainNav, setOpenMobileMainNav] = useState(false);
@@ -157,6 +156,7 @@ function Courses() {
                         <Route path="Piazza" element={<h1>Piazza</h1>} />
                         <Route path="Assignments" element={<Assignments />} />
                         <Route path="Assignments/:assignmentId" element={<Editor />} />
+                        {/* <Route path="Assignments/newAssignment" element={<Editor />} /> */}
                         <Route path="Grades" element={<Grades />} />
                     </Routes>
                 </div>

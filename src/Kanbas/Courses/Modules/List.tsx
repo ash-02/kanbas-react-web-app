@@ -1,13 +1,26 @@
-import React, { useState } from "react";
 import "./index.css";
-import { modules } from "../../Database";
-import { FaEllipsisV, FaCheckCircle, FaPlusCircle, FaPlus } from "react-icons/fa";
+import {
+    FaEllipsisV, FaCheckCircle,
+    FaPlusCircle, FaPlus,
+    FaPencilAlt, FaTrash
+} from "react-icons/fa";
 import { useParams } from "react-router";
+import { useSelector, useDispatch } from "react-redux";
+import {
+    addModule,
+    deleteModule,
+    updateModule,
+    setModule,
+} from "./reducer";
+import { KanbasState } from "../../store";
 
 function ModuleList() {
     const { courseId } = useParams();
-    const modulesList = modules.filter((module) => module.course === courseId);
-    const [selectedModule, setSelectedModule] = useState(modulesList[0]);
+    const moduleList = useSelector((state: KanbasState) =>
+        state.modulesReducer.modules);
+    const module = useSelector((state: KanbasState) =>
+        state.modulesReducer.module);
+    const dispatch = useDispatch();
 
     return (
         <>
@@ -31,24 +44,83 @@ function ModuleList() {
                     </button>
                 </div>
                 <hr />
+                <div className="
+                d-flex
+                flex-column
+                justify-content-between
+                align-items-start
+                gap-2
+                p-2
+                w-50
+                ">
+                    <h5>Module Editor</h5>
+                    <input
+                        className="form-control"
+                        value={module.name}
+                        onChange={(e) =>
+                            dispatch(setModule({ ...module, name: e.target.value }))
+                        } />
+                    <textarea
+                        className="form-control"
+                        value={module.description}
+                        onChange={(e) =>
+                            dispatch(setModule({ ...module, description: e.target.value }))
+                        } />
+                    <div className="w-50 d-flex flex-row
+                    justify-content-start gap-2 align-items-center">
+                        <button className="btn btn-success " 
+                            onClick={() => dispatch(addModule({ ...module, course: courseId }))}>
+                            Add
+                        </button>
+                        <button className="btn btn-primary " 
+                            onClick={() => dispatch(updateModule(module))}>
+                            Update
+                        </button>
+                    </div>
+                </div>
+
+                <hr />
                 {/* <!-- Add buttons here --> */}
                 <ul className="list-group wd-modules">
-                    {modulesList.map((module) => (
-                        <li
-                            className="list-group-item"
-                            onClick={() => setSelectedModule(module)}>
-                            <div>
-                                <FaEllipsisV className="me-2" />
-                                {module.name}
-                                <span className="float-end">
-                                    <FaCheckCircle className="text-success" />
-                                    <FaPlusCircle className="ms-2" />
-                                    <FaEllipsisV className="ms-2" />
-                                </span>
-                            </div>
-                            {selectedModule._id === module._id && (
+                    {moduleList
+                        .filter((module) => module.course === courseId)
+                        .map((module, index) => (
+                            <li
+                                className="list-group-item"
+                                onClick={() => dispatch(setModule(module))}>
+                                <div>
+                                    <FaEllipsisV className="me-2" />
+                                    {module.name}
+                                    <span className="float-end
+                                    d-flex flex-row gap-2 align-items-center
+                                    ">
+                                        <FaCheckCircle className="text-success" />
+                                        <FaPlusCircle className="ms-2" />
+                                        <FaEllipsisV className="ms-2" />
+                                        <div className="
+                                        modules-button-group
+                                        d-flex
+                                        flex-row
+                                        justify-content-between
+                                        align-items-center
+                                        gap-2
+                                        fs-6
+                                        ">
+                                            <button
+                                                className="btn btn-primary"
+                                                onClick={() => dispatch(setModule(module))}>
+                                                <FaPencilAlt />
+                                            </button>
+                                            <button
+                                                className="btn btn-danger"
+                                                onClick={() => dispatch(deleteModule(module._id))}>
+                                                <FaTrash />
+                                            </button>
+                                        </div>
+                                    </span>
+                                </div>
                                 <ul className="list-group">
-                                    {module.lessons?.map((lesson) => (
+                                    {module.lessons?.map((lesson: any) => (
                                         <li className="list-group-item">
                                             <FaEllipsisV className="me-2" />
                                             {lesson.name}
@@ -59,9 +131,8 @@ function ModuleList() {
                                         </li>
                                     ))}
                                 </ul>
-                            )}
-                        </li>
-                    ))}
+                            </li>
+                        ))}
                 </ul>
             </div>
         </>

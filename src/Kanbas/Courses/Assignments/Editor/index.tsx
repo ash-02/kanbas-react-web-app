@@ -1,20 +1,50 @@
 import { useNavigate, useParams } from "react-router-dom";
-import { assignments } from "../../../Database";
 import "../index.css";
 import { FaCheckCircle, FaEllipsisV, FaPlus } from "react-icons/fa";
 import { IoCloseSharp } from "react-icons/io5";
-
+import { useSelector, useDispatch } from "react-redux";
+import {
+    addAssignment,
+    setAssignment,
+    updateAssignment,
+} from "../reducer";
+import { KanbasState } from "../../../store";
+import { useEffect } from "react";
 
 function AssignmentEditor() {
+
+    const assignmentList = useSelector((state: KanbasState) =>
+        state.assignmentReducer.assignments);
     const { assignmentId } = useParams();
-    const assignment = assignments.find(
-        (assignment) => assignment._id === assignmentId);
     const { courseId } = useParams();
     const navigate = useNavigate();
+    const dispatch = useDispatch();
+    const assignmentNew = useSelector((state: KanbasState) =>
+        state.assignmentReducer.assignment);
+
+    useEffect(() => {
+        if (assignmentId !== "newAssignment") {
+            const assignment = assignmentList.find(
+                (assignment) => assignment._id === assignmentId);
+            if (assignment) {
+                dispatch(setAssignment(assignment));
+            }
+        }
+    }, [assignmentId, assignmentList, dispatch])
+
     const handleSave = () => {
-        console.log("Actually saving assignment TBD in later assignments");
+        if (assignmentId === "newAssignment") {
+            dispatch(addAssignment({
+                ...assignmentNew,
+                course: courseId
+            }));
+        }
+        else if (assignmentId !== "newAssignment") {
+            dispatch(updateAssignment(assignmentNew));
+        }
         navigate(`/Kanbas/courses/${courseId}/Assignments`);
     };
+
     return (
         <div>
             <div className="d-flex flex-column">
@@ -32,14 +62,29 @@ function AssignmentEditor() {
                     <label htmlFor="assignment-name w-100">
                         Assignment Name
                         <br />
-                        <input className="input-tags" type="text" name="assignment-name" id="assignment-name"
-                            value={
-                                assignment?.title
-                            } placeholder="Enter the Assignment Title" />
+                        <input className="input-tags"
+                            type="text" name="assignment-name"
+                            id="assignment-name"
+                            value={assignmentNew?.title}
+                            placeholder="Enter the Assignment Title"
+                            onChange={(e) => {
+                                dispatch(setAssignment({
+                                    ...assignmentNew,
+                                    title: e.target.value,
+                                }));
+                            }}
+                        />
                     </label>
                     <textarea className="input-tags" name="" id="" cols={30}
-                        rows={5} >
-                        {assignment?.description}
+                        rows={5}
+                        onChange={(e) => {
+                            dispatch(setAssignment({
+                                ...assignmentNew,
+                                description: e.target.value,
+                            }));
+                        }}
+                    >
+                        {assignmentNew?.description}
                     </textarea>
                 </div>
                 <div className="input-label-grps d-flex flex-column gap-2 ">
@@ -47,7 +92,16 @@ function AssignmentEditor() {
                         <label htmlFor="points">
                             Points
                         </label>
-                        <input type="number" name="points" id="points" value="100" />
+                        <input type="number" name="points" id="points"
+                            value={assignmentNew?.points}
+                            onChange={(e) => {
+                                console.log(e.target.value);
+                                dispatch(setAssignment({
+                                    ...assignmentNew,
+                                    points: e.target.value,
+                                }));
+                            }}
+                        />
                     </div>
                     <div className="input-grp">
                         <label htmlFor="assignment-group">
@@ -161,20 +215,41 @@ function AssignmentEditor() {
                                         <label htmlFor="">
                                             Due
                                         </label>
-                                        <input type="date" value={assignment?.due} />
+                                        <input type="date" value={assignmentNew?.due}
+                                            onChange={(e) => {
+                                                dispatch(setAssignment({
+                                                    ...assignmentNew,
+                                                    due: e.target.value,
+                                                }));
+                                            }}
+                                        />
                                     </div>
                                     <div className="w-100 d-flex gap-2 ">
                                         <div className="w-50">
                                             <label htmlFor="">
                                                 Available From
                                             </label>
-                                            <input type="date" value="2023-09-06" />
+                                            <input type="date" value="2023-09-06"
+                                                onChange={(e) => {
+                                                    dispatch(setAssignment({
+                                                        ...assignmentNew,
+                                                        availableFromDate: e.target.value,
+                                                    }));
+                                                }}
+                                            />
                                         </div>
                                         <div className="w-50">
                                             <label htmlFor="">
                                                 Until
                                             </label>
-                                            <input type="date" value="2023-09-20" />
+                                            <input type="date" value="2023-09-20"
+                                                onChange={(e) => {
+                                                    dispatch(setAssignment({
+                                                        ...assignmentNew,
+                                                        availableUntilDate: e.target.value,
+                                                    }));
+                                                }}
+                                            />
                                         </div>
                                     </div>
                                 </div>
