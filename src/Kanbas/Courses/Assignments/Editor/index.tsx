@@ -30,6 +30,16 @@ function AssignmentEditor() {
                 dispatch(setAssignment(assignment));
             }
         }
+        else {
+            dispatch(setAssignment({
+                title: "New Assignment",
+                description: "New Description",
+                points: 100,
+                due: "2023-12-15",
+                availableFromDate: "2023-12-15",
+                availableUntilDate: "2023-12-15"
+            }));
+        }
     }, [assignmentId, assignmentList, dispatch])
 
     const handleSave = () => {
@@ -83,8 +93,8 @@ function AssignmentEditor() {
                                 description: e.target.value,
                             }));
                         }}
+                        value={assignmentNew?.description}
                     >
-                        {assignmentNew?.description}
                     </textarea>
                 </div>
                 <div className="input-label-grps d-flex flex-column gap-2 ">
