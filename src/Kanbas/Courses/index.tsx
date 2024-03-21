@@ -22,6 +22,30 @@ export const CourseNavContext = createContext(
     }
 );
 
+const AssignmentId = ({
+    courseId
+}: {
+    courseId: any;
+}) => {
+    const { assignmentId } = useParams();
+
+    return (
+        <>
+            <span className="d-none d-md-inline  ">
+                <Link to={
+                    `/kanbas/courses/${courseId}/Assignments`
+                }>
+                    Assignments
+                </Link> / {assignmentId}
+            </span>
+            <span className="d-md-none d-block">
+                Assignments / {assignmentId}
+            </span>
+        </>
+    );
+
+}
+
 function Courses({ courses }: { courses: any[]; }) {
 
     const [openMobileCourseNav, setOpenMobileCourseNav] = useState(false);
@@ -47,7 +71,6 @@ function Courses({ courses }: { courses: any[]; }) {
         }
     }, [width]);
 
-
     return (
         <div className="p-md-4 p-0 h-100 ">
             <div className="">
@@ -71,7 +94,10 @@ function Courses({ courses }: { courses: any[]; }) {
                                     <Route path="Modules" element={<span>Modules</span>} />
                                     <Route path="Piazza" element={<span>Piazza</span>} />
                                     <Route path="Assignments" element={<span>Assignments</span>} />
-                                    <Route path="Assignments/:assignmentId" element={<span>Assignment Editor</span>} />
+                                    <Route
+                                        path="Assignments/:assignmentId"
+                                        element={<AssignmentId courseId={courseId} />}
+                                    />
                                     <Route path="Grades" element={<span>Grades</span>} />
                                 </Routes>
                             </li>
@@ -102,7 +128,7 @@ function Courses({ courses }: { courses: any[]; }) {
                                 <Route path="Modules" element={<span>Modules</span>} />
                                 <Route path="Piazza" element={<span>Piazza</span>} />
                                 <Route path="Assignments" element={<span>Assignments</span>} />
-                                <Route path="Assignments/:assignmentId" element={<span>Assignment Editor</span>} />
+                                <Route path="Assignments/:assignmentId" element={<AssignmentId courseId={courseId}/>} />
                                 <Route path="Grades" element={<span>Grades</span>} />
                             </Routes>
                         </h6>

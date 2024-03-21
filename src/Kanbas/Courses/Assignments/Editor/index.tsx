@@ -280,7 +280,9 @@ function AssignmentEditor() {
                         <div className="submission-button-grp
                         d-flex gap-3
                         ">
-                            <button onClick={() => handleSave()}>
+                            <button onClick={() => {
+                                navigate(`/Kanbas/courses/${courseId}/Assignments`);
+                            }}>
                                 Cancel
                             </button>
                             <button onClick={() => handleSave()}>

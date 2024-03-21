@@ -1,6 +1,6 @@
 import {
     FaCheckCircle, FaEllipsisV, FaPlusCircle,
-    FaList, FaCaretDown, FaPlus, FaTrash
+    FaList, FaCaretDown, FaPlus, FaTrash, FaPen
 } from "react-icons/fa";
 import { Link, useParams } from "react-router-dom";
 import "./index.css"
@@ -104,10 +104,10 @@ function Assignments() {
                                             } | {assignment.points ? assignment.points : "N/A"} pts </span>
                                         </div>
                                     </div>
-                                    <span className="d-flex flex-row gap-2 align-items-center ">
+                                    <span className="d-flex flex-row gap-3 align-items-center ">
                                         <FaCheckCircle className="text-success" />
                                         <Link to={`/kanbas/courses/${courseId}/Assignments/${assignment._id}`} className="text-black">
-                                            <FaEllipsisV />
+                                            <FaPen />
                                         </Link>
                                         <FaTrash onClick={
                                             () => {
